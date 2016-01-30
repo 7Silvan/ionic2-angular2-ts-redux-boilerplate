@@ -8,7 +8,6 @@ import {fromJS} from 'immutable';
 import {provider} from  'ng2-redux';
 import store from './stores/store';
 
-
 @App({
   config: {},
   providers: [provider(store)],
