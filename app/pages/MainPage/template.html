@@ -1,0 +1,27 @@
+<ion-navbar *navbar>
+  <ion-title>Posts</ion-title>
+</ion-navbar>
+
+<ion-content [ngSwitch]="status">
+
+  <template ngSwitchWhen="success">
+    <ion-list>
+      <ion-item *ngFor="#post of posts">
+        <span>{{ post.getIn(['data','title']) }}</span>
+      </ion-item>
+    </ion-list>
+  </template>
+
+  <template ngSwitchWhen="loading">
+    Loading...
+  </template>
+
+  <template ngSwitchWhen="error">
+    <ion-card>
+      <ion-card-content>
+        Error...
+      </ion-card-content>
+    </ion-card>
+  </template>
+
+</ion-content>
