@@ -7,8 +7,6 @@ import {bindActionCreators} from 'redux';
 import {postsActions} from '../../actions/postsActions';
 import {dummyActions} from '../../actions/dummyActions';
 
-console.log('MainPage.ts --> Po', postsActions);
-
 @Page({
   providers: [],
   templateUrl: 'build/pages/MainPage/template.html',
