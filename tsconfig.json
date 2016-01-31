@@ -3,16 +3,14 @@
     "target": "ES5",
     "module": "commonjs",
     "noEmitOnError": false,
-    "rootDir": ".",
+    "rootDir": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": false,
-    "sourceRoot": "",
-    "inlineSourceMap": false,
-    "inlineSources": false
+    "sourceMap": true,
+    "sourceRoot": ""
   },
   "files": [
-    "app/app.ts"
+    "app/MyApp.ts"
   ],
   "exclude": [
     "node_modules"
