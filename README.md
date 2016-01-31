@@ -1,5 +1,3 @@
-```
----
 #### Dependencies
 ```shell
 nvm install 4.2.0
