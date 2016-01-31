@@ -1,9 +1,10 @@
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
 import * as thunk from 'redux-thunk';
 import rootReducer from '../reducers/rootReducer';
 import {fromJS} from 'immutable';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMiddleware(rootReducer, fromJS({}));
-
+const store = createStore(rootReducer, fromJS({}), compose(
+  applyMiddleware(thunk),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+));
 export default store;
