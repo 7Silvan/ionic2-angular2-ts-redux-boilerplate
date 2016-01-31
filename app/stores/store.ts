@@ -4,6 +4,6 @@ import rootReducer from '../reducers/rootReducer';
 import {fromJS} from 'immutable';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMiddleware(rootReducer, fromJS({});
+const store = createStoreWithMiddleware(rootReducer, fromJS({}));
 
 export default store;

@@ -4,8 +4,10 @@ import {Inject} from 'angular2/core';
 
 import {bindActionCreators} from 'redux';
 
-import * as PostsActions from '../../actions/PostsActions';
-import * as DummyActions from '../../actions/DummyActions';
+import {postsActions} from '../../actions/postsActions';
+import {dummyActions} from '../../actions/dummyActions';
+
+console.log('MainPage.ts --> Po', postsActions);
 
 @Page({
   providers: [],
@@ -36,7 +38,7 @@ export class MainPage {
   }
 
   private mapDispatchToThis(dispatch):void {
-    const actions = Object.assign({}, PostsActions, DummyActions);
+    const actions = Object.assign({}, postsActions, dummyActions);
     return bindActionCreators(actions, dispatch);
   }
 
