@@ -1,5 +1,4 @@
 import {Page, Platform} from 'ionic-framework/ionic';
-import {List} from 'immutable';
 import {Inject} from 'angular2/core';
 
 import {bindActionCreators} from 'redux';
