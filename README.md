@@ -1,3 +1,6 @@
+#### What is it?
+This is an Ionic2 boilerplate. Ionic2 uses Angular2 and this particularly boilerplate uses typescript, redux, immutablejs and the much improved [WKWebView](http://developer.telerik.com/featured/why-ios-8s-wkwebview-is-a-big-deal-for-hybrid-development/).  
+
 #### Dependencies
 ```shell
 nvm install 4.2.0
