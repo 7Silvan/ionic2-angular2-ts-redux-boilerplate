@@ -47,7 +47,7 @@
   ],
   "cordovaPlatforms": [
     "ios",
-    { ite
+    { 
       "platform": "ios",
       "version": "",
       "locator": "ios"
@@ -60,7 +60,7 @@
     "validate": "npm ls"
   },
   "precommit.silent": true,
-    "pre-commit": [
+  "pre-commit": [
       "lint"
   ]
 }
