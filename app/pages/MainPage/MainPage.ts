@@ -1,5 +1,5 @@
-import {Page, Platform} from 'ionic-framework/ionic';
-import {Inject} from 'angular2/core';
+import {App, Platform, Page} from 'ionic-angular';
+import {Inject} from '@angular/core';
 
 import {bindActionCreators} from 'redux';
 

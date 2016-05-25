@@ -119,8 +119,6 @@
       "check-module",
       "check-separator"
     ],
-    "export-class-name": true,
-    "export-name": true,
     "use-isnan": true,
     "missing-optional-annotation": true,
     "no-banned-terms": true,
@@ -154,8 +152,6 @@
     "prefer-array-literal": true,
     "promise-must-complete": true,
     "use-named-parameter": true,
-    "valid-typeof": true,
-    "no-trailing-comma": true,
-    "no-unused-import": false
+    "valid-typeof": true
   }
 }

@@ -27,7 +27,7 @@ const setErrorState = (error) => {
 const setLoadingState = () => {
   return {
     data: fromJS({
-      status: 'loading'
+      status: 'loading',
     }),
     type: actionTypes.POSTS_FETCH_INIT,
   };
@@ -51,5 +51,5 @@ const fetchPosts = () => {
 };
 
 export const postsActions = {
-  fetchPosts
+  fetchPosts,
 };

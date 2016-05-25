@@ -2,7 +2,7 @@ import * as request from 'xhr-request';
 
 const jsonRequest = (url, errorCallback, successCallback) => {
     const options = {
-        json: true
+        json: true,
     };
     request(url, options, (error, response) => {
         if (error) {
@@ -13,4 +13,4 @@ const jsonRequest = (url, errorCallback, successCallback) => {
     });
 };
 
-export default jsonRequest
+export default jsonRequest;

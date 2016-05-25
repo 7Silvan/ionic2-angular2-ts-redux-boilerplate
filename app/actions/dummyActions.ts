@@ -27,7 +27,7 @@ const setErrorState = (error) => {
 const setLoadingState = () => {
   return {
     data: fromJS({
-      status: 'loading'
+      status: 'loading',
     }),
     type: actionTypes.DUMMY_FETCH_INIT,
   };
@@ -50,5 +50,5 @@ const fetchDummy = ():any => {
 };
 
 export const dummyActions = {
-  fetchDummy
+  fetchDummy,
 };
