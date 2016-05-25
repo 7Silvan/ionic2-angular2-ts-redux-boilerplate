@@ -1,5 +1,7 @@
 #### What is it?
-This is an Ionic2 boilerplate. Ionic2 uses Angular2 and this particularly boilerplate uses typescript, redux, immutablejs and the much improved [WKWebView](http://developer.telerik.com/featured/why-ios-8s-wkwebview-is-a-big-deal-for-hybrid-development/).  
+This is an Ionic2 boilerplate. Ionic2 uses Angular2 and this particularly boilerplate uses typescript, redux, immutablejs and the much improved [WKWebView](http://developer.telerik.com/featured/why-ios-8s-wkwebview-is-a-big-deal-for-hybrid-development/).
+
+---
 
 #### Dependencies
 ```shell
@@ -20,6 +22,8 @@ nvm use 4.2.0 && npm install && ionic plugin add cordova-plugin-wkwebview-engine
 # You need to run the Command Prompt as administrator on Windows.
 ```
 
+---
+
 #### Start Web
 ```shell
 ionic run serve
@@ -29,7 +33,6 @@ ionic run serve
 ```shell
 ionic run ios && ionic run ios
 ```
-
 
 ---
 
