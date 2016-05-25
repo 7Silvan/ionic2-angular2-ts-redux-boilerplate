@@ -51,11 +51,10 @@
     }
   ],
   "cordovaPlatforms": [
-    "ios",
     {
       "platform": "ios",
-      "version": "",
-      "locator": "ios"
+      "version": "4.0.0",
+      "locator": "ios@4.0.0"
     }
   ],
   "name": "ionic2-angular2-and-typescript-boilerplate",
