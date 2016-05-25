@@ -12,10 +12,21 @@ npm install -g ionic@beta
 ```shell
 git clone https://github.com/janjarfalk/ionic2-angular2-ts-redux-boilerplate.git
 cd ionic2-angular2-ts-redux-boilerplate
-nvm use 4.2.0 && npm install && ionic serve
+nvm use 4.2.0 && npm install && ionic plugin add cordova-plugin-wkwebview-engine && ionic plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugins.git#master:local-webserver
 
 # You need to run the Command Prompt as administrator on Windows.
 ```
+
+#### Start Web
+```shell
+ionic run serve
+```
+
+#### Start IOS Simulator
+```shell
+ionic run ios && ionic run ios
+```
+
 
 ---
 
