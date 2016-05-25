@@ -53,8 +53,8 @@
       "locator": "ios"
     }
   ],
-  "name": "tabs",
-  "description": "tabs: An Ionic project",
+  "name": "ionic2-angular2-and-typescript-boilerplate",
+  "description": "An Ionic Boilerplate",
     "scripts": {
     "lint": "tslint -s tslint/formatters -t color --config tslint.json 'app/**/*.ts'",
     "validate": "npm ls"
