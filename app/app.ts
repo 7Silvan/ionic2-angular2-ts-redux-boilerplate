@@ -9,9 +9,10 @@ import store from './stores/store';
     providers: [provider(store)],
     template: '<ion-nav id="nav" [root]="root" #content></ion-nav>',
 })
-export class App {
+export class MyApp {
+    root: any = MainPage
+
     constructor(platform:Platform, @Inject('ngRedux') ngRedux) {
-        this.root = MainPage;
         platform.ready().then(() => {
             // Do any necessary cordova or native calls here now that
             // the platform is ready
