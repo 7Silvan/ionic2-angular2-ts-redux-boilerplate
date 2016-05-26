@@ -32,6 +32,8 @@ ionic run serve
 #### Start IOS Simulator
 ```shell
 ionic run ios && ionic run ios
+
+# Yes... you need to do it twice the first time. 
 ```
 
 ---
