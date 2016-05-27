@@ -26,9 +26,6 @@ export class MainPage {
   }
 
   selectPost(post:any):void {
-    // debugger
-    console.log("selectPost", post)
-    console.log("posts", this.posts)
     this.nav.push(this.postPage, {post: post})
   }
 
