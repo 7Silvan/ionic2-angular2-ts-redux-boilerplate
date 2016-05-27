@@ -1,0 +1,37 @@
+<ion-navbar *navbar>
+  <ion-title>Post Details</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-item>
+      <h2>{{ post.getIn(['data','title']) }}</h2>
+      <p>{{ createdDate(post) }}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{ post.getIn(['data','title']) }}</p>
+      <p>{{ post.getIn(['data','url']) }}</p>
+    </ion-card-content>
+
+    <ion-item>
+      <button primary clear item-left>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{ post.getIn(['data','ups']) }}</div>
+      </button>
+      <button primary clear item-left>
+        <ion-icon name="thumbs-down"></ion-icon>
+        <div>{{ post.getIn(['data','downs']) }}</div>
+      </button>
+      <button primary clear item-right>
+        <ion-icon name="text"></ion-icon>
+        <div>{{ post.getIn(['data','num_comments']) }}</div>
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+
+</ion-content>

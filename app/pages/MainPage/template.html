@@ -6,9 +6,9 @@
 
   <template ngSwitchWhen="success">
     <ion-list>
-      <ion-item *ngFor="let post of posts">
+      <button ion-item *ngFor="let post of posts" (click)="selectPost(post)">
         <span>{{ post.getIn(['data','title']) }}</span>
-      </ion-item>
+      </button>
     </ion-list>
   </template>
 

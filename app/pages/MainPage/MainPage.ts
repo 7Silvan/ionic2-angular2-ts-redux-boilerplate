@@ -1,4 +1,5 @@
-import {App, Platform, Page} from 'ionic-angular';
+import {App, Platform, Page, NavController} from 'ionic-angular';
+import {PostPage} from '../PostPage/PostPage';
 import {Inject} from '@angular/core';
 
 import {bindActionCreators} from 'redux';
@@ -15,12 +16,20 @@ export class MainPage {
   private unsubscribe:any;
   private fetchPosts:any;
   private fetchDummy:any;
+  postPage: any = PostPage;
 
-  constructor(@Inject('ngRedux') ngRedux) {
+  constructor(private nav: NavController, @Inject('ngRedux') ngRedux) {
     this.unsubscribe = ngRedux.connect(this.mapStateToThis, this.mapDispatchToThis)(this);
 
     this.fetchPosts();
     this.fetchDummy();
+  }
+
+  selectPost(post:any):void {
+    // debugger
+    console.log("selectPost", post)
+    console.log("posts", this.posts)
+    this.nav.push(this.postPage, {post: post})
   }
 
   private ngOnDestroy():void {
