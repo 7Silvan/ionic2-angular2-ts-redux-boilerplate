@@ -1,4 +1,4 @@
-const keyMirror = require('keymirror');
+import * as keyMirror from 'keymirror';
 
 const actionTypes = keyMirror({
   DUMMY_FETCH_FAIL: undefined,
