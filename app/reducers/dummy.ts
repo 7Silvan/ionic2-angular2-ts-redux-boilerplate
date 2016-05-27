@@ -1,7 +1,7 @@
 import actionTypes from '../actionTypes.ts';
 import {fromJS} from 'immutable';
 
-const dummy = (state = fromJS({}), action = {}) => {
+const dummy = (state = fromJS({}), action:any = {}) => {
   switch (action && action.type) {
     case actionTypes.DUMMY_FETCH_INIT:
     case actionTypes.DUMMY_FETCH_SUCCESS:
@@ -13,4 +13,3 @@ const dummy = (state = fromJS({}), action = {}) => {
 };
 
 export default dummy;
-
