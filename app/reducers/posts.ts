@@ -1,7 +1,7 @@
 import actionTypes from '../actionTypes.ts';
 import {fromJS} from 'immutable';
 
-const posts = (state = fromJS({}), action = {}) => {
+const posts = (state = fromJS({}), action:any = {}) => {
   switch (action && action.type) {
     case actionTypes.POSTS_FETCH_INIT:
     case actionTypes.POSTS_FETCH_SUCCESS:
@@ -13,4 +13,3 @@ const posts = (state = fromJS({}), action = {}) => {
 };
 
 export default posts;
-

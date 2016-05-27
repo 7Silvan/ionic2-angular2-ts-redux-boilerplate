@@ -1,7 +1,5 @@
 import {createStore, applyMiddleware, compose} from 'redux';
-// const thunk = require('redux-thunk').default;
-//
-import thunk from 'redux-thunk';
+const thunk = require('redux-thunk').default;
 import rootReducer from '../reducers/rootReducer';
 import {fromJS} from 'immutable';
 
