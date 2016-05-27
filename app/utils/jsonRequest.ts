@@ -6,7 +6,6 @@ const jsonRequest = (url, errorCallback, successCallback) => {
         json: true,
     };
     request(url, options, (error, response) => {
-        console.log(response)
         if (error) {
             errorCallback(error);
         } else {

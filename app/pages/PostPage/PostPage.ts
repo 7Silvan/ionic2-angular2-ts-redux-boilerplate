@@ -8,13 +8,12 @@ export class PostPage {
   post: any
 
   constructor(private navParams: NavParams) {
-    this.post = navParams.get('post')
-    console.log("loaded post", this.post)
+    this.post = navParams.get('post');
   }
 
   createdDate(post) {
-    let date = new Date(post.getIn(['data', 'created']) * 1000)
-    return date.toDateString()
+    let date = new Date(post.getIn(['data', 'created']) * 1000);
+    return date.toDateString();
   }
 
 }
