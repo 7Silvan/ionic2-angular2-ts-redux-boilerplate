@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 const thunk = require('redux-thunk').default;
 import rootReducer from '../reducers/rootReducer';
-import {fromJS} from 'immutable';
+import {getInitialState} from './initial_state';
 
 const enhancers = [];
 
@@ -9,7 +9,13 @@ if ((<any>window).devToolsExtension) {
   enhancers.push((<any>window).devToolsExtension());
 }
 
-const store = createStore(rootReducer, fromJS({}), compose(
+const finalCreateStore = compose(
+  applyMiddleware(thunk),
+  ...enhancers
+)(createStore);
+
+
+const store = createStore(rootReducer, getInitialState(), compose(
   applyMiddleware(thunk),
   ...enhancers
 ));

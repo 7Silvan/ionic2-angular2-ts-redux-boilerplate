@@ -7,27 +7,27 @@
   <ion-card>
 
     <ion-item>
-      <h2>{{ post.getIn(['data','title']) }}</h2>
+      <h2>{{ post.title }}</h2>
       <p>{{ createdDate(post) }}</p>
     </ion-item>
 
     <ion-card-content>
-      <p>{{ post.getIn(['data','title']) }}</p>
-      <p>{{ post.getIn(['data','url']) }}</p>
+      <p>{{ post.title }}</p>
+      <p>{{ post.url }}</p>
     </ion-card-content>
 
     <ion-item>
       <button primary clear item-left>
         <ion-icon name="thumbs-up"></ion-icon>
-        <div>{{ post.getIn(['data','ups']) }}</div>
+        <div>{{ post.ups }}</div>
       </button>
       <button primary clear item-left>
         <ion-icon name="thumbs-down"></ion-icon>
-        <div>{{ post.getIn(['data','downs']) }}</div>
+        <div>{{ post.downs }}</div>
       </button>
       <button primary clear item-right>
         <ion-icon name="text"></ion-icon>
-        <div>{{ post.getIn(['data','num_comments']) }}</div>
+        <div>{{ post.num_comments }}</div>
       </button>
     </ion-item>
 

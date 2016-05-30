@@ -1,7 +1,6 @@
 import {MainPage} from './pages/MainPage/MainPage';
 import {App, Platform} from 'ionic-angular';
-import {Inject} from '@angular/core';
-import {provider} from  'ng2-redux';
+import {provider, NgRedux} from  'ng2-redux';
 import store from './stores/store';
 
 @App({
@@ -12,7 +11,7 @@ import store from './stores/store';
 export class MyApp {
     root: any = MainPage
 
-    constructor(platform:Platform, @Inject('ngRedux') ngRedux) {
+    constructor(platform:Platform, private ngRedux: NgRedux<any>) {
         platform.ready().then(() => {
             // Do any necessary cordova or native calls here now that
             // the platform is ready
