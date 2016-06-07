@@ -12,8 +12,7 @@ export class PostPage {
   }
 
   createdDate(post) {
-    let date = new Date(post.getIn(['data', 'created']) * 1000);
-    return date.toDateString();
+    return post.created.toDateString();
   }
 
 }

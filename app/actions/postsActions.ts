@@ -1,12 +1,13 @@
 import actionTypes from '../actionTypes.ts';
 import {fromJS} from 'immutable';
 import jsonRequest from '../utils/jsonRequest';
+import {Post} from '../post';
 
 // Success.
 const setSuccessState = (response) => {
   return {
     data: fromJS({
-      response: response.data.children,
+      items: response.data.children.map((p)=> Post.fromJS(p.data)),
       status: 'success',
     }),
     type: actionTypes.POSTS_FETCH_SUCCESS,
@@ -17,7 +18,8 @@ const setSuccessState = (response) => {
 const setErrorState = (error) => {
   return {
     data: fromJS({
-      response: error,
+      items: [],
+      message: error,
       status: 'error',
     }),
     type: actionTypes.POSTS_FETCH_FAIL,
@@ -27,15 +29,15 @@ const setErrorState = (error) => {
 const setLoadingState = () => {
   return {
     data: fromJS({
+      items: [],
       status: 'loading',
     }),
     type: actionTypes.POSTS_FETCH_INIT,
   };
 };
 
-const fetchPosts = () => {
+const fetchPosts = ():any => {
   return dispatch => {
-
     const url = 'https://www.reddit.com/top/.json?limit=10';
 
     // Set loading state.

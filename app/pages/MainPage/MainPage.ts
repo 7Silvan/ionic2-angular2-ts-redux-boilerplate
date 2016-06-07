@@ -1,48 +1,32 @@
 import {App, Platform, Page, NavController} from 'ionic-angular';
 import {PostPage} from '../PostPage/PostPage';
-import {Inject} from '@angular/core';
-
-import {bindActionCreators} from 'redux';
+import {Observable} from 'rxjs';
+import {AsyncPipe} from '@angular/common';
 
 import {postsActions} from '../../actions/postsActions';
 import {dummyActions} from '../../actions/dummyActions';
+import {NgRedux} from 'ng2-redux';
 
 @Page({
-  providers: [],
   templateUrl: 'build/pages/MainPage/template.html',
+  pipes: [AsyncPipe]
 })
 export class MainPage {
-  private status:string;
-  private unsubscribe:any;
-  private fetchPosts:any;
-  private fetchDummy:any;
   postPage: any = PostPage;
+  posts$: Observable<any>;
+  status$: Observable<any>;
 
-  constructor(private nav: NavController, @Inject('ngRedux') ngRedux) {
-    this.unsubscribe = ngRedux.connect(this.mapStateToThis, this.mapDispatchToThis)(this);
+  constructor(private nav: NavController, private ngRedux: NgRedux<any>) {}
 
-    this.fetchPosts();
-    this.fetchDummy();
+  ngOnInit() {
+    this.status$ = this.ngRedux.select(state=> state.getIn(["posts", "status"]));
+    this.posts$ = this.ngRedux.select(state=> state.getIn(["posts", 'items']).toArray());
+
+    this.ngRedux.dispatch(<any>postsActions.fetchPosts())
+    this.ngRedux.dispatch(<any>dummyActions.fetchDummy())
   }
 
   selectPost(post:any):void {
     this.nav.push(this.postPage, {post: post})
   }
-
-  private ngOnDestroy():void {
-    this.unsubscribe();
-  }
-
-  private mapStateToThis(state):any {
-    return {
-      posts: state.getIn(['posts', 'response']),
-      status: state.getIn(['posts', 'status']),
-    };
-  }
-
-  private mapDispatchToThis(dispatch):void {
-    const actions = Object.assign({}, postsActions, dummyActions);
-    return bindActionCreators(actions, dispatch);
-  }
-
 }
