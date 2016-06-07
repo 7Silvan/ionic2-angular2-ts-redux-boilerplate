@@ -2,7 +2,7 @@
   <ion-title>Posts</ion-title>
 </ion-navbar>
 
-<ion-content [ngSwitch]="status$ | async">
+<ion-content [ngSwitch]="status$ | async" class="mainPage">
 
   <template ngSwitchWhen="success">
     <ion-list>

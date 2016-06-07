@@ -25,6 +25,7 @@
   "devDependencies": {
     "del": "2.2.0",
     "gulp": "3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-watch": "4.3.5",
     "ionic-gulp-browserify-typescript": "^1.1.0",
     "ionic-gulp-fonts-copy": "^1.0.0",
