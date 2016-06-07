@@ -68,7 +68,13 @@ gulp.task('build', ['clean'], function(done){
 gulp.task('sass', function(){
   buildSass();
   return gulp.src('app/+(pages|components)/**/*.scss')
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: [
+        'node_modules/ionic-angular',
+        'node_modules/ionicons/dist/scss',
+        'app/theme'
+      ]
+    }))
     .pipe(concat('app.custom.css'))
     .pipe(gulp.dest('www/build/css'));
 });
