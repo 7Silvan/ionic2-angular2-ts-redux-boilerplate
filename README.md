@@ -26,14 +26,14 @@ nvm use 4.2.0 && npm install && ionic plugin add cordova-plugin-wkwebview-engine
 
 #### Start Web
 ```shell
-ionic run serve
+ionic serve
 ```
 
 #### Start IOS Simulator
 ```shell
 ionic run ios && ionic run ios
 
-# Yes... you need to do it twice the first time. 
+# Yes... you need to do it twice the first time.
 ```
 
 ---

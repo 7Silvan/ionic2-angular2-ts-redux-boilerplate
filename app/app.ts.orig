@@ -1,0 +1,27 @@
+import {MainPage} from './pages/MainPage/MainPage';
+<<<<<<< 1410d1b7fca8c78633b19438165c816c543dbff8
+import {App, Platform} from 'ionic-angular';
+import {provider, NgRedux} from  'ng2-redux';
+=======
+import {ionicBootstrap, Platform} from 'ionic-angular';
+import {Component, Inject} from '@angular/core';
+import {provider} from  'ng2-redux';
+>>>>>>> updated to ionic 2.0.0-beta.8
+import store from './stores/store';
+
+@Component({
+    template: '<ion-nav id="nav" [root]="root" #content></ion-nav>',
+})
+export class MyApp {
+    root: any = MainPage
+
+    constructor(platform:Platform, private ngRedux: NgRedux<any>) {
+        platform.ready().then(() => {
+            // Do any necessary cordova or native calls here now that
+            // the platform is ready
+        });
+
+    }
+}
+
+ionicBootstrap(MyApp, [provider(store)], {});
