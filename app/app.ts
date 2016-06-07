@@ -1,11 +1,10 @@
 import {MainPage} from './pages/MainPage/MainPage';
-import {App, Platform} from 'ionic-angular';
+import {ionicBootstrap, Platform} from 'ionic-angular';
+import {Component, Inject} from '@angular/core';
 import {provider, NgRedux} from  'ng2-redux';
 import store from './stores/store';
 
-@App({
-    config: {},
-    providers: [provider(store)],
+@Component({
     template: '<ion-nav id="nav" [root]="root" #content></ion-nav>',
 })
 export class MyApp {
@@ -19,3 +18,5 @@ export class MyApp {
 
     }
 }
+
+ionicBootstrap(MyApp, [provider(store)], {});

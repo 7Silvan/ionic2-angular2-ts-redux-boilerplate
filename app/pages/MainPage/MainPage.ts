@@ -1,5 +1,6 @@
-import {App, Platform, Page, NavController} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 import {PostPage} from '../PostPage/PostPage';
+import {Component, Inject} from '@angular/core';
 import {Observable} from 'rxjs';
 import {AsyncPipe} from '@angular/common';
 
@@ -7,7 +8,7 @@ import {postsActions} from '../../actions/postsActions';
 import {dummyActions} from '../../actions/dummyActions';
 import {NgRedux} from 'ng2-redux';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/MainPage/template.html',
   pipes: [AsyncPipe]
 })

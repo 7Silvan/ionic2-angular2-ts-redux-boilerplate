@@ -1,7 +1,8 @@
-import {Page, NavParams} from 'ionic-angular';
+import {NavParams} from 'ionic-angular';
+import {Component} from '@angular/core';
 
 
-@Page({
+@Component({
   templateUrl: 'build/pages/PostPage/template.html',
 })
 export class PostPage {
