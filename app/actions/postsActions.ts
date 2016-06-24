@@ -1,4 +1,4 @@
-import actionTypes from '../actionTypes.ts';
+import * as actionTypes from '../actionTypes.ts';
 import {fromJS} from 'immutable';
 import jsonRequest from '../utils/jsonRequest';
 import {Post} from '../post';

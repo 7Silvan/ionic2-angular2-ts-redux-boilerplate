@@ -1,13 +1,7 @@
-import * as keyMirror from 'keymirror';
+export const DUMMY_FETCH_FAIL: string     = 'POSTS_FETCH_SUCCESS';
+export const DUMMY_FETCH_INIT: string     = 'POSTS_FETCH_SUCCESS';
+export const DUMMY_FETCH_SUCCESS: string  = 'POSTS_FETCH_SUCCESS';
 
-const actionTypes = keyMirror({
-  DUMMY_FETCH_FAIL: undefined,
-  DUMMY_FETCH_INIT: undefined,
-  DUMMY_FETCH_SUCCESS: undefined,
-
-  POSTS_FETCH_FAIL: undefined,
-  POSTS_FETCH_INIT: undefined,
-  POSTS_FETCH_SUCCESS: undefined,
-});
-
-export default actionTypes;
+export const POSTS_FETCH_FAIL: string     = 'POSTS_FETCH_SUCCESS';
+export const POSTS_FETCH_INIT: string     = 'POSTS_FETCH_SUCCESS';
+export const POSTS_FETCH_SUCCESS: string  = 'POSTS_FETCH_SUCCESS';

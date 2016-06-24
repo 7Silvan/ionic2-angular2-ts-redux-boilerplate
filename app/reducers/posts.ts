@@ -1,4 +1,4 @@
-import actionTypes from '../actionTypes.ts';
+import * as actionTypes from '../actionTypes.ts';
 
 export default function posts(state:any, action:any = {}) {
   switch (action && action.type) {

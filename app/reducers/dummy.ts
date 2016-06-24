@@ -1,4 +1,4 @@
-import actionTypes from '../actionTypes.ts';
+import * as actionTypes from '../actionTypes.ts';
 
 export default function dummy(state:any, action:any = {}) {
   switch (action && action.type) {
