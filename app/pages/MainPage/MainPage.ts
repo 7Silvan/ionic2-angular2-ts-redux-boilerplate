@@ -20,8 +20,8 @@ export class MainPage {
   constructor(private nav: NavController, private ngRedux: NgRedux<any>) {}
 
   ngOnInit() {
-    this.status$ = this.ngRedux.select(state=> state.getIn(["posts", "status"]));
-    this.posts$ = this.ngRedux.select(state=> state.getIn(["posts", 'items']).toArray());
+    this.status$ = this.ngRedux.select(state=> state.posts.status);
+    this.posts$ = this.ngRedux.select(state=> state.posts.items);
 
     this.ngRedux.dispatch(<any>postsActions.fetchPosts())
     this.ngRedux.dispatch(<any>dummyActions.fetchDummy())

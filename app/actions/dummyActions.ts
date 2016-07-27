@@ -1,13 +1,13 @@
-import actionTypes from '../actionTypes.ts';
-import {fromJS} from 'immutable';
+import * as actionTypes from '../actionTypes.ts';
 import jsonRequest from '../utils/jsonRequest';
+import {DummyState} from '../stores/initial_state';
 import {Post} from '../post';
 
 // Success.
 const setSuccessState = (response) => {
   return {
-    data: fromJS({
-      items: response.data.children.map((p)=> Post.fromJS(p.data)),
+    data: new DummyState({
+      items: Post.fromJSArray(response.data.children),
       status: 'success',
     }),
     type: actionTypes.DUMMY_FETCH_SUCCESS,
@@ -17,8 +17,8 @@ const setSuccessState = (response) => {
 // Error.
 const setErrorState = (error) => {
   return {
-    data: fromJS({
-      items: [],
+    data: new DummyState({
+      items: Post.fromJSArray([]),
       message: error,
       status: 'error',
     }),
@@ -28,8 +28,8 @@ const setErrorState = (error) => {
 
 const setLoadingState = () => {
   return {
-    data: fromJS({
-      items: [],
+    data: new DummyState({
+      items: Post.fromJSArray([]),
       status: 'loading',
     }),
     type: actionTypes.DUMMY_FETCH_INIT,

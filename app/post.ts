@@ -1,4 +1,4 @@
-import {Record} from 'immutable';
+import {List, Record} from 'immutable';
 
 export const PostRecord = Record({
   id: "",
@@ -30,5 +30,9 @@ export class Post extends PostRecord {
       downs: data.downs,
       created: new Date(data.created * 1000)
     })
+  }
+
+  public static fromJSArray(list:Array<any>){
+    return List<Post>(list.map((p)=> Post.fromJS(p.data)))
   }
 }
